@@ -4,33 +4,32 @@ public class CameraManager : MonoBehaviour
 {
     #region Public Fields
 
-    public static bool invertX, invertY;
-    public static Vector2 sensitivity;
     public bool allowRotation = true;
-    public LayerMask collisionLayers = new LayerMask();
-    public float distance = 5;
     public bool lockCursor = true;
+    public bool returnToOrigin = true;
+    public bool rotateObjects = true;
+    public bool stayBehindTarget = false;
+    public float distance = 5;
     public float maxAngle = 90;
     public float maxDistance = 10;
     public float minAngle = -90;
     public float minDistance = 0;
-    public Vector2 originRotation = new Vector2();
     public float returnSmoothing = 3;
-    public bool returnToOrigin = true;
-    public bool rotateObjects = true;
-    public bool stayBehindTarget = false;
-    public Transform target;
-    public Vector2 targetOffset = new Vector2();
     public float zoomSmooth = 16;
     public float zoomSpeed = 1;
+    public LayerMask collisionLayers = new LayerMask();
+    public static bool invertX, invertY;
+    public static Vector2 sensitivity;
+    public Transform target;
+    public Vector2 originRotation = new Vector2();
+    public Vector2 targetOffset = new Vector2();
 
     #endregion Public Fields
 
     #region Private Fields
-
-    private Vector2 inputRotation;
     private float newDistance;
     private Quaternion rotation;
+    private Vector2 inputRotation;
 
     #endregion Private Fields
 
